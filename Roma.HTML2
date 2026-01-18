@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Roma | 2025/26 Season</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --roma-red: #8E1F2F;
+            --roma-gold: #F0BC42;
+            --apple-bg: #f5f5f7;
+            --text-dark: #1d1d1f;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--apple-bg);
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=2000') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--roma-gold);
+        }
+
+        /* Bento Grid Stats */
+        .container {
+            max-width: 1100px;
+            margin: -100px auto 50px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: scale(1.02); }
+
+        .big-card { grid-column: span 2; }
+        .full-card { grid-column: span 4; }
+
+        .stat-value { font-size: 3rem; font-weight: 700; color: var(--roma-red); }
+        .stat-label { font-size: 0.9rem; color: #86868b; text-transform: uppercase; }
+
+        /* Fixtures Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th { text-align: left; padding: 15px; border-bottom: 1px solid #e5e5e5; color: #86868b; }
+        td { padding: 15px; border-bottom: 1px solid #f5f5f7; }
+
+        .win { color: #2ecc71; font-weight: bold; }
+        .loss { color: #e74c3c; font-weight: bold; }
+
+        /* Manager Section */
+        .manager-bar {
+            background: var(--roma-red);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .manager-img {
+            width: 120px;
+            height: 120px;
+            background: #eee;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+            .big-card, .full-card { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>AS ROMA</h1>
+        <p>2025/2026 SEASON OVERVIEW</p>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <div class="stat-label">League Position</div>
+            <div class="stat-value">5th</div>
+            <div class="stat-label">Serie A</div>
+        </div>
+
+        <div class="card">
+            <div class="stat-label">Wins</div>
+            <div class="stat-value">13</div>
+            <p style="color: #2ecc71;">Form: W W L W</p>
+        </div>
+
+        <div class="card">
+            <div class="stat-label">Losses</div>
+            <div class="stat-value">7</div>
+            <p style="color: #e74c3c;">Clean Sheets: 2</p>
+        </div>
+
+        <div class="card">
+            <div class="stat-label">Draws</div>
+            <div class="stat-value">0</div>
+            <p>Aggressive Season</p>
+        </div>
+
+        <div class="full-card">
+            <div class="manager-bar">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Gian_Piero_Gasperini_2017.jpg/220px-Gian_Piero_Gasperini_2017.jpg" alt="Gasperini" class="manager-img">
+                <div>
+                    <div class="stat-label" style="color: var(--roma-gold)">Head Coach</div>
+                    <h2 style="margin: 5px 0;">Gian Piero Gasperini</h2>
+                    <p style="opacity: 0.8; margin: 0;">Appointed: June 2025 | Tactical Philosophy: 3-4-3 / High Press</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="big-card card">
+            <h3>Key Players</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>18. Matías Soulé</strong> (7 Goals)</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>21. Paulo Dybala</strong> (Attacking Mid)</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>9. Artem Dovbyk</strong> (Striker)</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>4. Bryan Cristante</strong> (Captain)</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>99. Mile Svilar</strong> (GK)</li>
+            </ul>
+        </div>
+
+        <div class="big-card card">
+            <h3>Recent Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Opponent</th>
+                        <th>Score</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Torino (Cup)</td>
+                        <td>2 - 3</td>
+                        <td class="loss">L</td>
+                    </tr>
+                    <tr>
+                        <td>Sassuolo</td>
+                        <td>2 - 0</td>
+                        <td class="win">W</td>
+                    </tr>
+                    <tr>
+                        <td>Lecce</td>
+                        <td>0 - 2</td>
+                        <td class="win">W</td>
+                    </tr>
+                    <tr>
+                        <td>Atalanta</td>
+                        <td>1 - 0</td>
+                        <td class="loss">L</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
